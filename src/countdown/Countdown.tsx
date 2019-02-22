@@ -31,7 +31,7 @@ class App extends Component<{}, State> {
     const diff = Moment.duration(midday.diff(Moment()));
     this.setState({
       hours: Math.floor(diff.asHours()),
-      minutes: Math.ceil(diff.asMinutes() % 60)
+      minutes: Math.ceil(diff.asMinutes() / 60)
     });
   };
 
